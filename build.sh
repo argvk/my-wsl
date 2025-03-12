@@ -16,6 +16,7 @@ trap 'error_handler $LINENO' ERR
 IMAGE=$(<IMAGE)
 
 # Import image for wsl
+echo "Pulling $IMAGE ..."
 curl -s -L $IMAGE | docker import - my-wsl-image:latest
 
 # Build and export to wsl compatible tar
