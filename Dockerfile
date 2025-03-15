@@ -4,7 +4,7 @@ RUN wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86
     dpkg -i cuda-keyring_1.1-1_all.deb
 
 RUN apt update && apt upgrade -y
-RUN apt install build-essential procps curl file git fish cuda-toolkit-12-8 -y
+RUN apt install build-essential procps curl file git fish cuda-toolkit-12-8 cuda-toolkit-12-4 postgresql-client -y
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 
